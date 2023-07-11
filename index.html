@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <title>Create logo</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        <title>Create logo</title>
     <style>
         @font-face {
             font-family: "PlexSan";
@@ -93,7 +95,7 @@
     <input type="color" name="font" id="font" value="#000000">
     <input type="color" name="bg" id="bg"  value="#f19fb7">
     <input type="button" onclick="execColor()" value="QUẤT" />
-    
+    <button id="downloadButton">Download Image</button>
     
 
     <!-- <img src="logoreal.png" width="300px"> -->
@@ -139,6 +141,16 @@
             $("#logo").css("color", $("#font").val());
         }
 
+        $(document).ready(function() {
+        $('#downloadButton').on('click', function() {
+        html2canvas(document.querySelector('#logo')).then(function(canvas) {
+        var link = document.createElement('a');
+        link.href = canvas.toDataURL();
+        link.download = 'image.png';
+        link.click();
+        });
+  });
+});
     </script>
 </body>
 
