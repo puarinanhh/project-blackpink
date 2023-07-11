@@ -31,15 +31,19 @@
 
         #logo {
             font-family: "PlexSan-bold";
-            width: 300px;
-            background-color: #0313B0;
-            color: white;
+            width: 400px;
+            background-color: #f19fb7;
+            color: #000000;
             text-align: center;
             padding: 120px;
+            .name {
+                margin-bottom: 20px;
+            }
         }
 
         #main {
-            font-size: 82px;
+            font-size: 70px;
+            margin-bottom: 25px;
         }
 
         #part {
@@ -75,11 +79,11 @@
     <br>
     <br>
     <div id="logo">
-        <label id="main">Đen Hồng</label>
+        <label id="main">ĐEN HỒNG</label>
         <br>
         <div id="part">
-            <label id="left">EST</label>
-            <label id="right">1976</label>
+            <label id="left">JENNIE</label>
+            <label id="right">1995</label>
         </div>
     </div>
 
@@ -102,16 +106,16 @@
             }
 
             if ($("#leftI").val() == "") {
-                alert("Điền phần bên trái! (eg. EST)");
+                alert("Điền phần bên trái! (eg....)");
                 return;
             }
 
             if ($("#rightI").val() == "") {
-                alert("Phần bên phải còn trống kìa! (eg. 1976)");
+                alert("Phần bên phải còn trống kìa! (eg....)");
                 return;
             }
 
-            $("#main").html($("#mainI").val());
+            $("#main").html($("#mainI").val().toUpperCase());
             $("#left").html($("#leftI").val());
             $("#right").html($("#rightI").val());
 
@@ -123,7 +127,7 @@
             $("#left").css("left", dis);
             $("#right").css("right", dis);
 
-            if (mw > 300) {
+            if (mw > 500) {
                 alert("Gõ phần chính hơi dài rồi bạn eiii...!!!");
                 return;
             }
