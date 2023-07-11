@@ -10,27 +10,27 @@
     <title>Create logo</title>
     <style>
         @font-face {
-            font-family: "vinamilk";
-            src: url(./VNMSansStd.otf)
+            font-family: "PlexSan";
+            src: url(./fonts/IBMPlexSans-Regular.ttf)
         }
 
         @font-face {
-            font-family: "vinamilk-reg";
-            src: url(./VNMSansStd.otf)
+            font-family: "PlexSan-reg";
+            src: url(./fonts/IBMPlexSans-Regular.ttf)
         }
 
         @font-face {
-            font-family: "vinamilk-bold";
-            src: url(./VNMSansStd.otf)
+            font-family: "PlexSan-bold";
+            src: url(./fonts/IBMPlexSans-Bold.ttf)
         }
 
         body {
             padding: 10px;
-            font-family: "vinamilk";
+            font-family: "PlexSan";
         }
 
         #logo {
-            font-family: "vinamilk-bold";
+            font-family: "PlexSan-bold";
             width: 300px;
             background-color: #0313B0;
             color: white;
@@ -66,7 +66,7 @@
 </head>
 
 <body>
-    <span id="head">Tạo logo của riêng bạn theo phong cách Vinamilk</span>
+    <span id="head">Tạo logo của riêng bạn theo phong cách BLACKPINK</span>
     <br>
     <input type="text" id="mainI" placeholder="Nội dung chính" />
     <input type="text" id="leftI" placeholder="Phần bên trái" />
@@ -75,7 +75,7 @@
     <br>
     <br>
     <div id="logo">
-        <label id="main">Vinamilk</label>
+        <label id="main">Đen Hồng</label>
         <br>
         <div id="part">
             <label id="left">EST</label>
@@ -86,8 +86,8 @@
     <br>
     <br>
     <span id="head">Cho bác nào muốn custom logo màu mè</span>
-    <input type="color" name="font" id="font" value="#ffffff">
-    <input type="color" name="bg" id="bg"  value="#0313B0">
+    <input type="color" name="font" id="font" value="#000000">
+    <input type="color" name="bg" id="bg"  value="#f19fb7">
     <input type="button" onclick="execColor()" value="QUẤT" />
     
     
@@ -97,7 +97,7 @@
     <script>
         function exec() {
             if ($("#mainI").val() == "") {
-                alert("Điền nội dung chính vô dùm! (eg. Vinamilk)");
+                alert("Điền nội dung chính vô dùm! (eg. Jennie)");
                 return;
             }
 
